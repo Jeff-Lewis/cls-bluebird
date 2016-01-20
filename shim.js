@@ -8,7 +8,7 @@ module.exports = function patchBluebird(ns) {
     }
 
     var Promise = require('bluebird');
-    var async = require('bluebird/js/main/async');
+    var async = require('bluebird/js/release/async');
     var proto = Promise && Promise.prototype;
 
     shimmer.wrap(proto, '_addCallbacks', function(_addCallbacks) {
