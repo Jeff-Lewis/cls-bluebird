@@ -21,13 +21,13 @@ module.exports = function patchBluebird(ns) {
         };
     });
 
-    shimmer.wrap(async, 'invokeLater', function(invokeLater) {
+    shimmer.wrap(async.prototype, 'invokeLater', function(invokeLater) {
         return function ns_invokeLater(fn, receiver, arg) {
             return invokeLater.call(this, (typeof fn === 'function') ? ns.bind(fn) : fn, receiver, arg);
         };
     });
 
-    shimmer.wrap(async, 'invoke', function(invoke) {
+    shimmer.wrap(async.prototype, 'invoke', function(invoke) {
         return function ns_invoke(fn, receiver, arg) {
             return invoke.call(this, (typeof fn === 'function') ? ns.bind(fn) : fn, receiver, arg);
         };
