@@ -1,6 +1,6 @@
 {
-  "name": "cls-bluebird",
-  "version": "1.0.2",
+  "name": "cls-bluebird-jl",
+  "version": "1.0.3-jl",
   "description": "Make bluebird work with the continuation-local-storage module.",
   "main": "shim.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/TimBeyer/cls-bluebird.git"
+    "url": "https://github.com/jeff-lewis/cls-bluebird.git"
   },
   "keywords": [
     "continuation-local-storage",
@@ -21,7 +21,7 @@
   "author": "Tim Beyer <tim.beyer@gmail.com>",
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/TimBeyer/cls-bluebird/issues"
+    "url": "https://github.com/jeff-lewis/cls-bluebird/issues"
   },
   "dependencies": {
     "shimmer": "~1"
@@ -31,7 +31,7 @@
     "redis": "~0.9.0"
   },
   "peerDependencies": {
-    "continuation-local-storage": "~3",
-    "bluebird": ">=1.0.3"
+    "continuation-local-storage": "~3.1.4",
+    "bluebird": ">=3.1.1"
   }
 }
