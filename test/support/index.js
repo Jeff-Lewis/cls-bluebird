@@ -17,7 +17,7 @@ var ns = require('./ns'),
 	catchRejections = require('./catchRejections');
 
 // Get bluebird version to test from environment vars
-var bluebirdVersion = process.env.BLUEBIRD_VERSION * 1;
+    var bluebirdVersion = process.env.npm_package_config_BLUEBIRD_VERSION * 1;
 
 // Get node version
 var nodeVersion = process.version.match(/^v(\d\d+|[1-9]|0\.\d+)\./)[1];
