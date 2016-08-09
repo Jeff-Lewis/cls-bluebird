@@ -1,23 +1,23 @@
 {
-  "name": "cls-bluebird",
-  "version": "1.1.3",
+  "name": "cls-bluebird-jl",
+  "version": "2.0.0-jl",
   "description": "Make bluebird work with the continuation-local-storage module.",
   "main": "lib/index.js",
   "scripts": {
     "test": "npm run jshint && npm run test-all",
     "test-all": "npm run test-bluebird2 && npm run test-bluebird3",
-    "test-bluebird2": "npm config set cls-bluebird:BLUEBIRD_VERSION 2 && npm run test-main",
-    "test-bluebird3": "npm config set cls-bluebird:BLUEBIRD_VERSION 3 && npm run test-main",
+    "test-bluebird2": "npm config set cls-bluebird-jl:BLUEBIRD_VERSION 2 && npm run test-main",
+    "test-bluebird3": "npm config set cls-bluebird-jl:BLUEBIRD_VERSION 3 && npm run test-main",
     "test-main": "mocha test/**/*.test.js",
     "jshint": "jshint lib test",
     "cover": "npm run cover-main && rm -rf coverage",
     "coveralls": "npm run cover-main && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage",
-    "cover-main": "COVERAGE=true&& npm config set cls-bluebird:BLUEBIRD_VERSION 3 && istanbul cover _mocha --report lcovonly -- -R spec 'test/**/*.test.js'",
+    "cover-main": "COVERAGE=true&& npm config set cls-bluebird-jl:BLUEBIRD_VERSION 3 && istanbul cover _mocha --report lcovonly -- -R spec 'test/**/*.test.js'",
     "travis": "bin/travis.sh"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/TimBeyer/cls-bluebird.git"
+    "url": "https://github.com/Jeff-Lewis/cls-bluebird.git"
   },
   "keywords": [
     "continuation-local-storage",
@@ -37,7 +37,7 @@
   "author": "Tim Beyer <tim.beyer@gmail.com>",
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/TimBeyer/cls-bluebird/issues"
+    "url": "https://github.com/Jeff-Lewis/cls-bluebird/issues"
   },
   "dependencies": {
     "shimmer": "^1.1.0",
